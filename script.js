@@ -1,35 +1,68 @@
 /* AGES 1-8 SECTION HONDURAS */
-const honduras = 'https://api.unsplash.com/collections/14679510/photos?client_id=DZEuSfi74vIUmStnngQNyRr7gq-_uXtslvCBuVX32CQ'
-let url;
+// const honduras = 'https://api.unsplash.com/collections/14679510/photos?client_id=DZEuSfi74vIUmStnngQNyRr7gq-_uXtslvCBuVX32CQ'
+// let url;
 
-fetch(honduras)
-.then(res => {
-    return res.json()
-})
+// fetch(honduras)
+// .then(res => {
+//     return res.json()
+// })
 
-.then((json)=> {
-    let hondurasArr = json;
-    // console.log(hondurasArr);
-    hondurasPics(hondurasArr)
+// .then((json)=> {
+//     let hondurasArr = json;
+//     console.log(hondurasArr);
+//     hondurasPics(hondurasArr)
+// })
+ 
 
-})
+// function hondurasPics(pics){
+// for(i = 0; i < pics.length; i++){
+//     // let pix = pics[0].urls.full
+//     // console.log(pix)
+//     // document.querySelector('.picture').src = pix
+//     document.getElementById('firstImg').src = pics[0].urls.full
+//     document.getElementById('secImg').src = pics[1].urls.full
+//     document.getElementById('thirdImg').src = pics[2].urls.full
+//     console.log('abc')
 
+//     // document.querySelectorAll('').src = pix
+// }  
+// }
 
-function hondurasPics(pics){
-    console.log(pics[0].urls.full)
-    for(let i = 0; i <= pics.length; i++){
-        console.log(pics[i].urls.full)
-        let picture = document.getElementById('d-block w-100')
-        picture.src = pics.urls.full  
-    }
+// hondurasPics();
 
-    
-    // return (Math.random(pics).length.urls.full)
-}
+// console.log(pics[0].urls.full)
+// {
+//     console.log(pics[i].urls.full)
+//     let picture = document.getElementById('d-block w-100')
+//     picture.src = pics[0].urls.full  
+// }
 
-hondurasPics();
-
-
+$(document).ready(function(){
+    // Activate Carousel
+    $("#carouselExampleControls").carousel();
+      
+    // // Enable Carousel Indicators
+    // $(".item1").click(function(){
+    //   $("#myCarousel").carousel(0);
+    // });
+    // $(".item2").click(function(){
+    //   $("#myCarousel").carousel(1);
+    // });
+    // $(".item3").click(function(){
+    //   $("#myCarousel").carousel(2);
+    // });
+    // $(".item4").click(function(){
+    //   $("#myCarousel").carousel(3);
+    // });
+      
+    // Enable Carousel Controls
+    $(".left").click(function(){
+      $("#carouselExampleControls").carousel("prev");
+    });
+    $(".right").click(function(){
+      $("#carouselExampleControls").carousel("next");
+    });
+  });
 
 
 
